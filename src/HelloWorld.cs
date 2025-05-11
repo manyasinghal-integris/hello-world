@@ -50,6 +50,8 @@ namespace MyApp
             PrintElement(myData, 101);
             PrintElement(myData, 102);
 
+            CalculateFactorial(10);
+
             Logger.Info("Terminating program ...");
         }
         public static void PrintElement(Library.DataStore<int, string> Store, int index)
@@ -67,6 +69,30 @@ namespace MyApp
                 Console.WriteLine(String.Format("idx {0}: no such element in DataStore", index));
             }
         }
+        //adding a new function for Factorial
+        public static int CalculateFactorial(int n)
+        {
+        // Base case: factorial of 0 is 1
+            if (n == 0)
+            {
+                return 1;
+            }
+    
+            // Error handling: factorial is not defined for negative numbers
+            if (n < 0)
+            {
+                throw new ArgumentException("Factorial is not defined for negative numbers.", nameof(n));
+            }
+    
+            // Recursive step: n! = n * (n-1)!
+            int result = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+            Console.WriteLine("Should show result here: ");
+            return result;
+    }
 
     } // class HelloWorld
 
