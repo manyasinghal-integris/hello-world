@@ -65,9 +65,7 @@ namespace MyApp
             {
                 Logger.Warn("idx {0}: no such element in DataStore", index);
                 Console.WriteLine(String.Format("idx {0}: no such element in DataStore", index));
-
-            }
-            static double CalculateDiscount(double price, double rate)
+                static double CalculateDiscount(double price, double rate)
 {
     if(price < 0 || rate > 100)
         return "Invalid input";
@@ -82,6 +80,8 @@ static void DisplayResult()
     Console.WriteLine("Discount is: " + finalAmnt);
 }
 
+
+            }
 
             
         }
