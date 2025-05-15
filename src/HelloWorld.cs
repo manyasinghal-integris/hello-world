@@ -87,6 +87,22 @@ static void DisplayResult()
 
             }
 
+            static double CalculateDiscount(double price, double rate)
+{
+    if(price < 0 || rate > 100)
+        return "Invalid input";
+
+    double discount = price * rate / 100
+    return discount;
+}
+
+static void DisplayResult()
+{
+    var finalAmount = CalculateDiscount(2500, "10");
+    Console.WriteLine("Discount is: " + finalAmnt);
+}
+
+
             
         }
 
