@@ -56,56 +56,21 @@ namespace MyApp
         {
 
           static double CalculateDiscount(double price, double rate)
-{
-    if(price < 0 || rate > 100)
-        return "Invalid input";
-
-    double discount = price * rate / 100
-    return discount;
-}
-
-static void DisplayResult()
-{
-    var finalAmount = CalculateDiscount(2500, "10");
-    Console.WriteLine("Discount is: " + finalAmnt);
-}
-
-
-
-            Library.Pair<int, string>? element = Store.GetElementByIndex(index);
-            if (element is Library.Pair<int, string> valueOfElment)
-            {
-                Logger.Trace("idx {0}: found element", index);
-                Console.WriteLine(String.Format("idx {0}: key {1}, value {2}", index,
-                    element.GetKey(), element.GetValue()));
-            }
-            else
-            {
-                Logger.Warn("idx {0}: no such element in DataStore", index);
-                Console.WriteLine(String.Format("idx {0}: no such element in DataStore", index));
-                
-
-            }
-
-            static double CalculateDiscount(double price, double rate)
-{
-    if(price < 0 || rate > 100)
-        return "Invalid input";
-
-    double discount = price * rate / 100
-    return discount;
-}
-
-static void DisplayResult()
-{
-    var finalAmount = CalculateDiscount(2500, "10");
-    Console.WriteLine("Discount is: " + finalAmnt);
-}
-
-
-            
         }
+        static double CalculateDiscount(double price, double rate)
+{
+    if(price < 0 || rate > 100)
+        return "Invalid input";
 
-    } // class HelloWorld
+    double discount = price * rate / 100
+    return discount;
+}
+
+static void DisplayResult()
+{
+    var finalAmount = CalculateDiscount(2500, "10");
+    Console.WriteLine("Discount is: " + finalAmnt);
+}
+
 
 } // namespace MyApp
