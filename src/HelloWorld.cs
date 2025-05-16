@@ -16,16 +16,6 @@ namespace MyApp
             Logger.Info("Starting program ...");
             string LOGDIR = Environment.GetEnvironmentVariable("LOGDIR");
             Logger.Debug("LOGDIR is set to {0}", LOGDIR);
-
-            // Just for testing:
-            // Logger.Trace("Trace");
-            // Logger.Debug("Debug");
-            // Logger.Info("Info");
-            // Logger.Warn("Warn");
-            // Logger.Error("Error");
-            // Logger.Fatal("Fatal");
-
-
             Console.WriteLine("Hello, World!");
 
             double x = 1.234;
@@ -66,7 +56,35 @@ namespace MyApp
                 Logger.Warn("idx {0}: no such element in DataStore", index);
                 Console.WriteLine(String.Format("idx {0}: no such element in DataStore", index));
             }
+            public int[] SortArray() 
+            {
+                var n = NumArray.Length;
+
+                for (int i = 0; i < n - 1; i++)
+                    for (int j = 0; j < n - i - 1; j++)
+                        if (NumArray[j] > NumArray[j + 1])
+                        {
+                            var tempVar = NumArray[j];
+                            NumArray[j] = NumArray[j + 1];
+                            NumArray[j + 1] = tempVar;
+                        }
+
+                return NumArray;
+            }
         }
+        static void BubbleSort(int[] a)
+{
+    for (int i = 0; i < a.Length - 1; i++)
+        for (int j = 0; j < a.Length - i - 1; j++)
+            if (a[j] > a[j + 1])
+                (a[j], a[j + 1]) = (a[j + 1], a[j]);
+}
+
+static void Print(int[] a)
+{
+    Console.WriteLine(string.Join(" ", a));
+}
+
 
     } // class HelloWorld
 
